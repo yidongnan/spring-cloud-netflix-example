@@ -1,0 +1,64 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/central/" }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/gradleplugins/" }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter/" }
+        mavenCentral()
+    }
+    ext {
+        springBootVersion = '1.3.5.RELEASE'
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.11'
+    distributionUrl = "http://crp-public.oss-cn-hangzhou.aliyuncs.com/gradle/gradle-2.11-bin.zip"
+}
+
+repositories {
+    mavenLocal()
+    maven { url "http://maven.aliyun.com/nexus/content/repositories/central/" }
+    maven { url "http://maven.aliyun.com/nexus/content/repositories/gradleplugins/" }
+    maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter/" }
+}
+
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'spring-boot'
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/central/" }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/gradleplugins/" }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter/" }
+    }
+    buildscript {
+        repositories {
+            mavenLocal()
+            maven { url "http://maven.aliyun.com/nexus/content/repositories/central/" }
+            maven { url "http://maven.aliyun.com/nexus/content/repositories/gradleplugins/" }
+            maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter/" }
+            mavenCentral()
+        }
+        dependencyManagement {
+            imports {
+                mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.RELEASE"
+            }
+        }
+    }
+
+    if (project.parent == null) {
+        buildDir = new File(rootProject.buildDir, project.name)
+    } else {
+        buildDir = new File(project.parent.buildDir, project.name)
+    }
+}
