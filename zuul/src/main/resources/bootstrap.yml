@@ -33,3 +33,7 @@ zuul:
     a-service:
       path: /**
       serviceId: service-a
+
+endpoints:
+ shutdown:
+  enabled: true

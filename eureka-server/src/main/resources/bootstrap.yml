@@ -18,3 +18,7 @@ eureka:
 
   server:
     enable-self-preservation: false
+
+endpoints:
+ shutdown:
+  enabled: true
