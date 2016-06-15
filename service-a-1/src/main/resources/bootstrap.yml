@@ -1,9 +1,16 @@
 server:
   port: 8080
 
+name: michael
+
 spring:
   application:
     name: service-a
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: configserver
 
 eureka:
   instance:
