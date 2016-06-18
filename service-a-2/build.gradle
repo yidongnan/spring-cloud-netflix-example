@@ -7,5 +7,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-validation')
     compile('org.springframework.cloud:spring-cloud-starter-config')
     compile('org.springframework.cloud:spring-cloud-starter-bus-amqp')
+    compile('org.springframework.cloud:spring-cloud-starter-zipkin')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
