@@ -3,7 +3,10 @@ server:
 
 spring:
   application:
-    name: zuul-server
+    name: zuul
+  sleuth:
+    sampler:
+      percentage: 1
 
 eureka:
   instance:
@@ -41,14 +44,17 @@ endpoints:
 spring:
   profiles: docker
   application:
-    name: zuul-server
+    name: zuul
+  sleuth:
+    sampler:
+      percentage: 1
 
 server:
   port: 8060
 
 eureka:
   instance:
-    hostname: zuul-server
+    hostname: zuul
   client:
     registerWithEureka: true
     fetchRegistry: true

@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: service-b
+  sleuth:
+    sampler:
+      percentage: 1
 
 eureka:
   instance:
@@ -22,6 +25,9 @@ spring:
   profiles: docker
   application:
     name: service-b
+  sleuth:
+    sampler:
+      percentage: 1
 
 server:
   port: 8070

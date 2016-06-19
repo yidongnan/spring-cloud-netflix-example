@@ -11,6 +11,9 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+  sleuth:
+    sampler:
+      percentage: 1
 
 eureka:
   instance:
@@ -35,6 +38,11 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+  rabbitmq:
+    host: rabbitmq
+  sleuth:
+    sampler:
+      percentage: 1
 
 server:
     port: 8080

@@ -4,8 +4,6 @@ server:
 spring:
   application:
     name: admin-dashboard
-  boot.admin.discovery:
-    ignored-services: consul
 
 eureka:
   instance:
@@ -20,8 +18,6 @@ spring:
   profiles: docker
   application:
     name: admin-dashboard
-  boot.admin.discovery:
-    ignored-services: consul
 
 server:
   port: 8040

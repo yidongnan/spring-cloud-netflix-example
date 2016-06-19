@@ -8,6 +8,9 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 /**
  * User: Michael
  * Email: zhangyichen@xiaoniu66.com
@@ -25,7 +28,13 @@ public class AServiceController {
 
     @RequestMapping("/")
     public String printServiceA() {
-        return name + ":" + "service-a:\n\t" + serviceBClient.printServiceB();
+        String host = "unknown";
+        try {
+            host = InetAddress.getLocalHost().getHostName();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return name + ":" + host + ":service-a:\n\t" + serviceBClient.printServiceB();
     }
 
 }

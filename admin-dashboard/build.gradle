@@ -1,5 +1,6 @@
 dependencies {
     compile('de.codecentric:spring-boot-admin-server:1.3.3')
     compile('de.codecentric:spring-boot-admin-server-ui:1.3.3')
+    compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
 }
