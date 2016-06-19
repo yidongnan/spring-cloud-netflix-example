@@ -15,3 +15,22 @@ eureka:
     fetchRegistry: true
     serviceUrl:
             defaultZone: http://localhost:8761/eureka/
+---
+spring:
+  profiles: docker
+  application:
+    name: admin-dashboard
+  boot.admin.discovery:
+    ignored-services: consul
+
+server:
+  port: 8040
+
+eureka:
+  instance:
+    hostname: admin-dashboard
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+            defaultZone: http://eureka-server:8761/eureka/

@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: zuul-service
+    name: zuul-server
 
 eureka:
   instance:
@@ -27,6 +27,35 @@ hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
 
 # Increase the Hystrix timeout to 60s (per service)
 #hystrix.command.<serviceName>.execution.isolation.thread.timeoutInMilliseconds: 60000
+
+zuul:
+  routes:
+    a-service:
+      path: /**
+      serviceId: service-a
+
+endpoints:
+ shutdown:
+  enabled: true
+---
+spring:
+  profiles: docker
+  application:
+    name: zuul-server
+
+server:
+  port: 8060
+
+eureka:
+  instance:
+    hostname: zuul-server
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+            defaultZone: http://eureka-server:8761/eureka/
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
 
 zuul:
   routes:

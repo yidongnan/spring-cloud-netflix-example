@@ -15,7 +15,31 @@ eureka:
     fetchRegistry: false
     serviceUrl:
             defaultZone: http://localhost:8761/eureka/
+  server:
+    enable-self-preservation: false
 
+endpoints:
+ shutdown:
+  enabled: true
+---
+spring:
+  profiles: docker
+  application:
+    name: eureka-server
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: eureka-server
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 30
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+            defaultZone: http://eureka-server:8761/eureka/
   server:
     enable-self-preservation: false
 

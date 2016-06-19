@@ -16,3 +16,23 @@ eureka:
 
 turbine:
   appConfig: service-a,service-b
+---
+spring:
+  profiles: docker
+  application:
+    name: hystrix-dashboard
+
+server:
+  port: 8050
+
+eureka:
+ instance:
+   hostname: hystrix-dashboard
+ client:
+   registerWithEureka: true
+   fetchRegistry: true
+   serviceUrl:
+           defaultZone: http://eureka-server:8761/eureka/
+
+turbine:
+  appConfig: service-a,service-b

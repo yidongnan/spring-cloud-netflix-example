@@ -1,0 +1,55 @@
+server:
+  port: 8080
+
+name: michael
+
+spring:
+  application:
+    name: service-a
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+endpoints:
+ shutdown:
+  enabled: true
+
+---
+spring:
+  profiles: docker
+  application:
+    name: service-a
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+
+server:
+    port: 8080
+
+name: michael
+
+eureka:
+  instance:
+    hostname: service-a
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+            defaultZone: http://eureka-server:8761/eureka/
+
+endpoints:
+ shutdown:
+  enabled: true

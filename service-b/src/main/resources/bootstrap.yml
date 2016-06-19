@@ -1,11 +1,9 @@
 server:
-  port: 8100
+  port: 8070
 
 spring:
-  profiles:
-    active: native
   application:
-    name: config-server
+    name: service-b
 
 eureka:
   instance:
@@ -15,20 +13,28 @@ eureka:
     fetchRegistry: true
     serviceUrl:
             defaultZone: http://localhost:8761/eureka/
+
+endpoints:
+ shutdown:
+  enabled: true
 ---
 spring:
   profiles: docker
   application:
-    name: config-server
+    name: service-b
 
 server:
-  port: 8100
+  port: 8070
 
 eureka:
   instance:
-    hostname: config-server
+    hostname: service-b
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
             defaultZone: http://eureka-server:8761/eureka/
+
+endpoints:
+ shutdown:
+  enabled: true

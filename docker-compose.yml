@@ -1,0 +1,77 @@
+rabbitmq:
+  image: rabbitmq:3-management
+  ports:
+    - "4369:4369"
+    - "5671:5671"
+    - "5672:5672"
+    - "25672:25672"
+    - "15672:15672"
+zipkin:
+  image: openzipkin/zipkin
+  ports:
+    - "9411:9411"
+eureka-server:
+  image:  spring-cloud-netflix-example/eureka-server
+  ports:
+    - "8761:8761"
+
+config-server:
+  image:  spring-cloud-netflix-example/config-server
+#  expose:
+#    - "8761"
+  links:
+    - "eureka-server"
+    - "admin-dashboard"
+    - "rabbitmq"
+
+service-b:
+  image:  spring-cloud-netflix-example/service-b
+#  expose:
+#    - "8070"
+  links:
+    - "eureka-server"
+    - "config-server"
+    - "admin-dashboard"
+    - "hystrix-dashboard:"
+    - "rabbitmq"
+    - "zipkin"
+
+service-a:
+  image:  spring-cloud-netflix-example/service-a
+#  expose:
+#    - "8080"
+  links:
+    - "eureka-server"
+    - "config-server"
+    - "service-b"
+    - "admin-dashboard"
+    - "hystrix-dashboard:"
+    - "rabbitmq"
+    - "zipkin"
+
+admin-dashboard:
+  image:  spring-cloud-netflix-example/admin-dashboard
+  ports:
+    - "8040:8040"
+  links:
+    - "eureka-server"
+    - "rabbitmq"
+
+zuul:
+  image:  spring-cloud-netflix-example/zuul
+  ports:
+    - "8060:8060"
+  links:
+    - "eureka-server"
+    - "config-server"
+    - "service-a"
+    - "admin-dashboard"
+    - "rabbitmq"
+    - "zipkin"
+
+hystrix-dashboard:
+  image:  spring-cloud-netflix-example/hystrix-dashboard
+  ports:
+    - "8050:8050"
+  links:
+    - "eureka-server"

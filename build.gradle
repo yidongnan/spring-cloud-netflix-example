@@ -55,10 +55,4 @@ subprojects {
             }
         }
     }
-
-    if (project.parent == null) {
-        buildDir = new File(rootProject.buildDir, project.name)
-    } else {
-        buildDir = new File(project.parent.buildDir, project.name)
-    }
 }
