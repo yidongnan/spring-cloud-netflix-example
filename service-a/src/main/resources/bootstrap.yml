@@ -43,6 +43,8 @@ spring:
   sleuth:
     sampler:
       percentage: 1
+  zipkin:
+    base-url: http://zipkin:9411/
 
 server:
     port: 8080
