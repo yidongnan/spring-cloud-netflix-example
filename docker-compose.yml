@@ -46,6 +46,7 @@ admin-dashboard:
   image:  spring-cloud-netflix-example/admin-dashboard
   ports:
     - "8040:8040"
+  hostname: admin-dashboard
   links:
     - "eureka-server"
     - "rabbitmq"
