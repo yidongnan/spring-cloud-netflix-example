@@ -37,6 +37,7 @@ server:
 eureka:
   instance:
     hostname: service-b
+    prefer-ip-address: true
   client:
     registerWithEureka: true
     fetchRegistry: true

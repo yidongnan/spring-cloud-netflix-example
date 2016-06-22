@@ -33,6 +33,7 @@ server:
 eureka:
   instance:
     hostname: eureka-server
+    prefer-ip-address: true
     lease-expiration-duration-in-seconds: 30
     lease-renewal-interval-in-seconds: 30
   client:

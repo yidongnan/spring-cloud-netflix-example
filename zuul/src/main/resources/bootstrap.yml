@@ -57,6 +57,7 @@ server:
 eureka:
   instance:
     hostname: zuul
+    prefer-ip-address: true
   client:
     registerWithEureka: true
     fetchRegistry: true

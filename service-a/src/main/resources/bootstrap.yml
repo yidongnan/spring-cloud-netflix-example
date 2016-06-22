@@ -54,6 +54,7 @@ name: michael
 eureka:
   instance:
     hostname: service-a
+    prefer-ip-address: true
   client:
     registerWithEureka: true
     fetchRegistry: true

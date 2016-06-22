@@ -25,6 +25,7 @@ server:
 eureka:
   instance:
     hostname: admin-dashboard
+    prefer-ip-address: true
   client:
     registerWithEureka: true
     fetchRegistry: true
