@@ -51,7 +51,7 @@ subprojects {
         }
         dependencyManagement {
             imports {
-                mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.RELEASE"
+                mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR1"
             }
         }
     }
