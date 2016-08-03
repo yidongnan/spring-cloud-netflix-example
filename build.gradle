@@ -1,9 +1,6 @@
 buildscript {
     repositories {
         mavenLocal()
-        maven { url "http://maven.aliyun.com/nexus/content/repositories/central/" }
-        maven { url "http://maven.aliyun.com/nexus/content/repositories/gradleplugins/" }
-        maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter/" }
         mavenCentral()
     }
     ext {
@@ -21,9 +18,7 @@ task wrapper(type: Wrapper) {
 
 repositories {
     mavenLocal()
-    maven { url "http://maven.aliyun.com/nexus/content/repositories/central/" }
-    maven { url "http://maven.aliyun.com/nexus/content/repositories/gradleplugins/" }
-    maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter/" }
+    mavenCentral()
 }
 
 
@@ -37,21 +32,16 @@ subprojects {
 
     repositories {
         mavenLocal()
-        maven { url "http://maven.aliyun.com/nexus/content/repositories/central/" }
-        maven { url "http://maven.aliyun.com/nexus/content/repositories/gradleplugins/" }
-        maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter/" }
+        mavenCentral()
     }
     buildscript {
         repositories {
             mavenLocal()
-            maven { url "http://maven.aliyun.com/nexus/content/repositories/central/" }
-            maven { url "http://maven.aliyun.com/nexus/content/repositories/gradleplugins/" }
-            maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter/" }
             mavenCentral()
         }
         dependencyManagement {
             imports {
-                mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR1"
+                mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR4"
             }
         }
     }
