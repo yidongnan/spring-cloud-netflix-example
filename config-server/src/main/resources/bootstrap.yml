@@ -6,6 +6,8 @@ spring:
     active: native
   application:
     name: config-server
+  rabbitmq:
+    host: localhost
 
 eureka:
   instance:
