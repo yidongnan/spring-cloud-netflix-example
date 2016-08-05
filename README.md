@@ -15,7 +15,7 @@ if you want to start more serve, you should use
 docker-compose scale service-a=2 service-b=3  
 ```
 
-## Tech list
+## Technology List
 * Spring Cloud Netflix
 * Spring Cloud Sleuth
 * Spring Cloud Config
