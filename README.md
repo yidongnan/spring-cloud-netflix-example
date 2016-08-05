@@ -1,8 +1,8 @@
 # spring-cloud-netflix-example
 spring-cloud-netflix-example is a example for microservices system.
 
-It contain configuration
-**management,service discovery, circuit breakers, intelligent routing,distributed tracing,application monitor**
+It contain 
+**configuration management, service discovery, circuit breakers, intelligent routing, distributed tracing, application monitor**.
 
 ## Getting Started
 ```shell
