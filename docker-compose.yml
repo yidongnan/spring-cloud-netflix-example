@@ -14,6 +14,7 @@ zipkin:
 
 eureka-server:
   image:  spring-cloud-netflix-example/eureka-server
+  hostname: eureka-server
   ports:
     - "8761:8761"
 
