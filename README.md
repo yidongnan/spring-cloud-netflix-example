@@ -10,6 +10,10 @@ It contain
 ./buildDockerImage.sh
 docker-compose up
 ```
+if you want to start more serve, you should use 
+```shell
+docker-compose scale service-a=2 service-b=3  
+```
 
 ## Tech list
 * Spring Cloud Netflix
