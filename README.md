@@ -29,7 +29,7 @@ docker-compose scale service-a=2 service-b=3
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Architecture.png">
 
-## screenshots
+## Screenshots
 ### Api Route(Zuul)
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_001.png">
