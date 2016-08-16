@@ -7,6 +7,6 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 RUN mkdir /app
 WORKDIR /app
 COPY build/libs/config-server.jar /app
-VOLUME config/ /app/config
+VOLUME /app/config
 ENTRYPOINT ["dockerize", "-timeout", "5m", "-wait", "tcp://eureka-server:8761", "-wait", "tcp://rabbitmq:5672", "java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app/config-server.jar", "--spring.profiles.active=native,docker"]
 EXPOSE 8100

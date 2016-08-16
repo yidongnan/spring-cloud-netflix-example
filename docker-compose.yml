@@ -23,6 +23,8 @@ config-server:
   links:
     - "eureka-server"
     - "rabbitmq"
+  volumes:
+    - ./config-server/config:/app/config
 
 service-b:
   image:  spring-cloud-netflix-example/service-b
