@@ -7,5 +7,5 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 RUN mkdir /app
 WORKDIR /app
 COPY build/libs/service-a.jar /app
-ENTRYPOINT ["dockerize", "-timeout", "5m", "-wait", "tcp://config-server:5672", "java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app/service-a.jar", "--spring.profiles.active=docker"]
+ENTRYPOINT ["dockerize", "-timeout", "5m", "-wait", "http://config-server:8100/health", "java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app/service-a.jar", "--spring.profiles.active=docker"]
 EXPOSE 8080
