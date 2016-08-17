@@ -11,6 +11,13 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+      fail-fast: true
+      retry:
+        initial-interval: 2000
+        max-interval: 200000
+        multiplier: 3
+  rabbitmq:
+    host: localhost
   sleuth:
     sampler:
       percentage: 1
@@ -38,6 +45,11 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+      fail-fast: true
+      retry:
+        initial-interval: 2000
+        max-interval: 200000
+        multiplier: 3
   rabbitmq:
     host: rabbitmq
   sleuth:
