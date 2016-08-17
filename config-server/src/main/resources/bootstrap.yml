@@ -8,6 +8,11 @@ spring:
     name: config-server
   rabbitmq:
     host: localhost
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/
 
 eureka:
   instance:
@@ -24,6 +29,11 @@ spring:
     name: config-server
   rabbitmq:
     host: rabbitmq
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:/app/config
 
 server:
   port: 8100
