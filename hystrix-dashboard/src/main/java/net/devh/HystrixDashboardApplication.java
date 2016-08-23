@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 /**
  * User: Michael
- * Email: zhangyichen@xiaoniu66.com
+ * Email: yidongnan@gmail.com
  * Date: 2016/6/8
  */
 @SpringBootApplication

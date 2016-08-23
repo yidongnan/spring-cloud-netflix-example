@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * User: Michael
- * Email: zhangyichen@xiaoniu66.com
+ * Email: yidongnan@gmail.com
  * Date: 2016/6/3
  */
 @EnableEurekaClient
