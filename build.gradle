@@ -40,7 +40,7 @@ subprojects {
         }
         dependencyManagement {
             imports {
-                mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR4"
+                mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR5"
             }
         }
     }
