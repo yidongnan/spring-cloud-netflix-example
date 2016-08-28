@@ -12,8 +12,7 @@ buildscript {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.11'
-    distributionUrl = "http://crp-public.oss-cn-hangzhou.aliyuncs.com/gradle/gradle-2.11-bin.zip"
+    gradleVersion = '3.0'
 }
 
 repositories {
