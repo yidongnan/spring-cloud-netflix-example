@@ -4,7 +4,7 @@ buildscript {
         mavenCentral()
     }
     ext {
-        springBootVersion = '1.3.5.RELEASE'
+        springBootVersion = '1.3.7.RELEASE'
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
