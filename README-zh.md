@@ -23,7 +23,7 @@ spring-cloud-netflix-example 项目是一个微服务系统的实例
 ```shell
 ./gradle clean build -x test
 ./buildDockerImage.sh
-docker-compose up
+docker-compose up -d
 ```
 if you want to start more serve, you should use 
 ```shell

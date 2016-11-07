@@ -1,6 +1,4 @@
 # spring-cloud-netflix-example
-README: [English](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README.md) | [中文](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README-zh.md)
-
 spring-cloud-netflix-example is a example for microservices system.
 
 It contain 
@@ -10,7 +8,7 @@ It contain
 ```shell
 ./gradle clean build -x test
 ./buildDockerImage.sh
-docker-compose up
+docker-compose up -d
 ```
 if you want to start more serve, you should use 
 ```shell
