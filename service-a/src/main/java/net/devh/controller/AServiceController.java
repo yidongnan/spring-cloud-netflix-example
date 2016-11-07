@@ -1,15 +1,14 @@
 package net.devh.controller;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import net.devh.hystrix.HystrixWrappedServiceBClient;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import net.devh.hystrix.HystrixWrappedServiceBClient;
 
 /**
  * User: Michael
@@ -25,16 +24,13 @@ public class AServiceController {
 
     @Autowired
     private HystrixWrappedServiceBClient serviceBClient;
+    @Autowired
+    DiscoveryClient discoveryClient;
 
     @RequestMapping("/")
     public String printServiceA() {
-        String host = "unknown";
-        try {
-            host = InetAddress.getLocalHost().getHostName();
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
-        return name + ":" + host + ":service-a:\n\t" + serviceBClient.printServiceB();
+        ServiceInstance serviceInstance = discoveryClient.getLocalServiceInstance();
+        return serviceInstance.getServiceId() + " (" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + ")" + "===>name:" + name + "<br/>" + serviceBClient.printServiceB();
     }
 
 }
