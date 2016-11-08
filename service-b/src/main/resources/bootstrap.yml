@@ -34,7 +34,6 @@ endpoints:
  shutdown:
   enabled: true
 
-msg: Hello
 ---
 spring:
   profiles: docker
@@ -75,5 +74,3 @@ eureka:
 endpoints:
  shutdown:
   enabled: true
-
-msg: Hello
