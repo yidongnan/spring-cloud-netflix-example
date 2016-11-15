@@ -7,9 +7,11 @@ spring-cloud-netflix-example is a example for microservices system.
 It contain 
 **configuration management, service discovery, circuit breakers, intelligent routing, distributed tracing, application monitor**.
 
+The registry center uses the eureka, if you want to use consul, you can refer to https://github.com/yidongnan/spring-cloud-consul-example
+
 ## Getting Started
 ```shell
-./gradle clean build -x test
+./gradlew clean build -x test
 ./buildDockerImage.sh
 docker-compose up -d
 ```

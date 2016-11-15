@@ -4,10 +4,10 @@ README: [English](https://github.com/yidongnan/spring-cloud-netflix-example/blob
 
 Java技术交流群：294712648 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=34ad403ce78380042406f11a122637ea9d66c11ae20f331dff37bc90a4fde939"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Java技术交流群" title="Java技术交流群"></a>
 
-
-
 spring-cloud-netflix-example 项目是一个微服务系统的实例
 项目包括如下功能： **配置管理 、服务发现、熔断,、动态路由、分布式跟踪、应用监控**
+
+注册中心使用的 eureka，使用 consul 的例子可以参考 https://github.com/yidongnan/spring-cloud-consul-example
 
 ## 技术栈
 * Spring Cloud Netflix
@@ -21,7 +21,7 @@ spring-cloud-netflix-example 项目是一个微服务系统的实例
 
 ## Getting Started
 ```shell
-./gradle clean build -x test
+./gradlew clean build -x test
 ./buildDockerImage.sh
 docker-compose up -d
 ```
