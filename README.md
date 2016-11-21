@@ -2,9 +2,9 @@
 
 README: [English](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README.md) | [中文](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README-zh.md)
 
-spring-cloud-netflix-example is a example for microservices system.
+spring-cloud-netflix-example is an example for microservices system.
 
-It contain 
+It's contain 
 **configuration management, service discovery, circuit breakers, intelligent routing, distributed tracing, application monitor**.
 
 The registry center uses the eureka, if you want to use consul, you can refer to https://github.com/yidongnan/spring-cloud-consul-example
