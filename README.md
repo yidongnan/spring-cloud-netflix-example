@@ -29,6 +29,7 @@ docker-compose scale service-a=2 service-b=3
 * ZipKin
 * RabbitMQ
 * Docker
+* Swagger
 
 ## Architecture Overview
 [](url "title")

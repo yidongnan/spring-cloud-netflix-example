@@ -1,11 +1,11 @@
 package net.devh.hystrix;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import net.devh.feign.ServiceBClient;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * User: Michael

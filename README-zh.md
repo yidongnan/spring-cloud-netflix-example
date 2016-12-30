@@ -18,6 +18,7 @@ spring-cloud-netflix-example 项目是一个微服务系统的实例
 * ZipKin
 * RabbitMQ
 * Docker
+* Swagger
 
 ## Getting Started
 ```shell
