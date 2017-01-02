@@ -4,11 +4,12 @@ buildscript {
         mavenCentral()
     }
     ext {
-        springBootVersion = '1.3.7.RELEASE'
+        springBootVersion = '1.4.2.RELEASE'
+        springCloudVersion = 'Camden.SR3'
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath "io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE"
+        classpath "io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE"
     }
 }
 
@@ -41,7 +42,7 @@ subprojects {
         }
         dependencyManagement {
             imports {
-                mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR6"
+                mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
             }
         }
     }
