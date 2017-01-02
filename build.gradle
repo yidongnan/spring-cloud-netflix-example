@@ -9,7 +9,6 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath "io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE"
     }
 }
 
@@ -26,7 +25,6 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'idea'
     apply plugin: 'spring-boot'
-    apply plugin: "io.spring.dependency-management"
 
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
