@@ -7,6 +7,19 @@ spring:
   sleuth:
     sampler:
       percentage: 1
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      fail-fast: true
+      retry:
+        initial-interval: 2000
+        max-interval: 10000
+        multiplier: 2
+        max-attempts: 10
+  rabbitmq:
+    host: localhost
 
 eureka:
   instance:
@@ -20,6 +33,7 @@ eureka:
 endpoints:
  shutdown:
   enabled: true
+
 ---
 spring:
   profiles: docker
@@ -30,6 +44,19 @@ spring:
       percentage: 1
   zipkin:
     base-url: http://zipkin:9411/
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      fail-fast: true
+      retry:
+        initial-interval: 2000
+        max-interval: 10000
+        multiplier: 2
+        max-attempts: 10
+  rabbitmq:
+    host: rabbitmq
 
 server:
   port: 8070

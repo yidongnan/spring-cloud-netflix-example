@@ -1,13 +1,23 @@
 # spring-cloud-netflix-example
-
 README: [English](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README.md) | [中文](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README-zh.md)
 
-spring-cloud-netflix-example is an example for microservices system.
 
-It's contain 
-**configuration management, service discovery, circuit breakers, intelligent routing, distributed tracing, application monitor**.
+Java技术交流群：294712648 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=34ad403ce78380042406f11a122637ea9d66c11ae20f331dff37bc90a4fde939"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Java技术交流群" title="Java技术交流群"></a>
 
-The registry center uses the eureka, if you want to use consul, you can refer to https://github.com/yidongnan/spring-cloud-consul-example
+spring-cloud-netflix-example 项目是一个微服务系统的实例
+项目包括如下功能： **配置管理 、服务发现、熔断,、动态路由、分布式跟踪、应用监控**
+
+注册中心使用的 eureka，使用 consul 的例子可以参考 https://github.com/yidongnan/spring-cloud-consul-example
+
+## 技术栈
+* Spring Cloud Netflix
+* Spring Cloud Sleuth
+* Spring Cloud Config
+* Spring Boot Admin
+* Spring Boot
+* ZipKin
+* RabbitMQ
+* Docker
 
 ## Getting Started
 ```shell
@@ -20,21 +30,12 @@ if you want to start more serve, you should use
 docker-compose scale service-a=2 service-b=3  
 ```
 
-## Technology List
-* Spring Cloud Netflix
-* Spring Cloud Sleuth
-* Spring Cloud Config
-* Spring Boot Admin
-* Spring Boot
-* ZipKin
-* RabbitMQ
-* Docker
 
-## Architecture Overview
+## 架构图
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Architecture.png">
 
-## Screenshots
+## 截图
 ### Api Route(Zuul)
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_001.png">

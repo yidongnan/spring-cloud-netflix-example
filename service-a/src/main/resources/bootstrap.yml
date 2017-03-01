@@ -1,8 +1,6 @@
 server:
   port: 8080
 
-name: michael
-
 spring:
   application:
     name: service-a
@@ -14,8 +12,9 @@ spring:
       fail-fast: true
       retry:
         initial-interval: 2000
-        max-interval: 200000
-        multiplier: 3
+        max-interval: 10000
+        multiplier: 2
+        max-attempts: 10
   rabbitmq:
     host: localhost
   sleuth:
@@ -48,8 +47,9 @@ spring:
       fail-fast: true
       retry:
         initial-interval: 2000
-        max-interval: 200000
-        multiplier: 3
+        max-interval: 10000
+        multiplier: 2
+        max-attempts: 10
   rabbitmq:
     host: rabbitmq
   sleuth:
@@ -60,8 +60,6 @@ spring:
 
 server:
     port: 8080
-
-name: michael
 
 eureka:
   instance:
