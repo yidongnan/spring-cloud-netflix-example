@@ -7,7 +7,9 @@ spring:
   sleuth:
     sampler:
       probability: 1
-
+  zipkin:
+    sender:
+      type: web
 eureka:
   instance:
     hostname: localhost
@@ -56,7 +58,8 @@ spring:
       probability: 1
   zipkin:
     base-url: http://zipkin:9411/
-
+    sender:
+      type: web
 server:
   port: 8060
 

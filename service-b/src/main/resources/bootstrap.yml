@@ -20,6 +20,9 @@ spring:
         max-attempts: 10
   rabbitmq:
     host: localhost
+  zipkin:
+    sender:
+      type: web
 
 eureka:
   instance:
@@ -50,6 +53,8 @@ spring:
       probability: 1
   zipkin:
     base-url: http://zipkin:9411/
+    sender:
+      type: web
   cloud:
     config:
       discovery:
@@ -86,5 +91,3 @@ management:
       enabled: true
     health:
       show-details: ALWAYS
-  security:
-    enabled: true
