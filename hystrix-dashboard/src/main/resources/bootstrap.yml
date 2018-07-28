@@ -16,6 +16,16 @@ eureka:
 
 turbine:
   appConfig: service-a,service-b
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS
 ---
 spring:
   profiles: docker
@@ -37,3 +47,13 @@ eureka:
 
 turbine:
   appConfig: service-a,service-b
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS

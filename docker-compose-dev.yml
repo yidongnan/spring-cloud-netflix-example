@@ -1,0 +1,13 @@
+rabbitmq:
+  image: rabbitmq:3-management
+  ports:
+    - "4369:4369"
+    - "5671:5671"
+    - "5672:5672"
+    - "25672:25672"
+    - "15672:15672"
+
+zipkin:
+  image: openzipkin/zipkin
+  ports:
+    - "9411:9411"

@@ -1,6 +1,8 @@
 dependencies {
-    compile('de.codecentric:spring-boot-admin-server:1.4.5')
-    compile('de.codecentric:spring-boot-admin-server-ui:1.4.5')
+    compile('de.codecentric:spring-boot-admin-starter-server:2.0.1')
+    compile('de.codecentric:spring-boot-admin-starter-client:2.0.1')
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
 }

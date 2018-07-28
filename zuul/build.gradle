@@ -2,6 +2,8 @@ dependencies {
     compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     compile('org.springframework.cloud:spring-cloud-starter-netflix-zuul')
     compile('org.springframework.boot:spring-boot-starter-actuator')
+    compile('de.codecentric:spring-boot-admin-starter-client:2.0.1')
     compile('org.springframework.cloud:spring-cloud-starter-zipkin')
+    compile('org.springframework.boot:spring-boot-starter-security')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

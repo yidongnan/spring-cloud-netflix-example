@@ -3,6 +3,7 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-openfeign')
     compile('org.springframework.cloud:spring-cloud-starter-netflix-hystrix')
     compile('org.springframework.cloud:spring-cloud-starter-netflix-ribbon')
+    compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-validation')
     compile('org.springframework.boot:spring-boot-starter-aop')
@@ -10,6 +11,8 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-config')
     compile('org.springframework.cloud:spring-cloud-starter-bus-amqp')
     compile('org.springframework.cloud:spring-cloud-starter-zipkin')
+    compile('de.codecentric:spring-boot-admin-starter-client:2.0.1')
+    compile('org.springframework.boot:spring-boot-starter-security')
     compile('io.springfox:springfox-swagger2:2.6.1')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

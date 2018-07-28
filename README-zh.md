@@ -26,11 +26,15 @@ spring-cloud-netflix-example 项目是一个微服务系统的实例
 ./buildDockerImage.sh
 docker-compose up -d
 ```
-if you want to start more serve, you should use 
+如果你想启动更多的服务，你可以运行
 ```shell
 docker-compose scale service-a=2 service-b=3  
 ```
 
+开发环境中启动基础服务
+```
+docker-compose -f docker-compose-dev.yml up -d
+```
 
 ## 架构图
 [](url "title")

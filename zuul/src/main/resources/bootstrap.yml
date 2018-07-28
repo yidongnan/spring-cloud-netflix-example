@@ -6,7 +6,7 @@ spring:
     name: zuul
   sleuth:
     sampler:
-      percentage: 1
+      probability: 1
 
 eureka:
   instance:
@@ -36,10 +36,16 @@ zuul:
     a-service:
       path: /**
       serviceId: service-a
-
-endpoints:
- shutdown:
-  enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS
 ---
 spring:
   profiles: docker
@@ -47,7 +53,7 @@ spring:
     name: zuul
   sleuth:
     sampler:
-      percentage: 1
+      probability: 1
   zipkin:
     base-url: http://zipkin:9411/
 
@@ -72,6 +78,13 @@ zuul:
       path: /**
       serviceId: service-a
 
-endpoints:
- shutdown:
-  enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS

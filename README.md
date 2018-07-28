@@ -20,6 +20,11 @@ if you want to start more serve, you should use
 docker-compose scale service-a=2 service-b=3  
 ```
 
+start the basic service in the development environment
+```
+docker-compose -f docker-compose-dev.yml up -d
+```
+
 ## Technology List
 * Spring Cloud Netflix
 * Spring Cloud Sleuth
