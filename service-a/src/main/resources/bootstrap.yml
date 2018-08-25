@@ -19,8 +19,20 @@ spring:
     host: localhost
   sleuth:
     sampler:
-      percentage: 1
-
+      probability: 1
+  zipkin:
+    sender:
+      type: web
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS
 eureka:
   instance:
     hostname: localhost
@@ -30,9 +42,6 @@ eureka:
     serviceUrl:
             defaultZone: http://localhost:8761/eureka/
 
-endpoints:
- shutdown:
-  enabled: true
 
 ---
 spring:
@@ -54,9 +63,11 @@ spring:
     host: rabbitmq
   sleuth:
     sampler:
-      percentage: 1
+      probability: 1
   zipkin:
     base-url: http://zipkin:9411/
+    sender:
+      type: web
 
 server:
     port: 8080
@@ -70,7 +81,13 @@ eureka:
     fetchRegistry: true
     serviceUrl:
             defaultZone: http://eureka-server:8761/eureka/
-
-endpoints:
- shutdown:
-  enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS

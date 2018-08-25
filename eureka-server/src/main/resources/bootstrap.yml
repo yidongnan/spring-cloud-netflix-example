@@ -17,10 +17,16 @@ eureka:
             defaultZone: http://localhost:8761/eureka/
   server:
     enable-self-preservation: false
-
-endpoints:
- shutdown:
-  enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS
 ---
 spring:
   profiles: docker
@@ -43,7 +49,13 @@ eureka:
             defaultZone: http://eureka-server:8761/eureka/
   server:
     enable-self-preservation: false
-
-endpoints:
- shutdown:
-  enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS

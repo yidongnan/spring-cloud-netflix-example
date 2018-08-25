@@ -1,5 +1,7 @@
 dependencies {
-    compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
+    compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server")
+    compile('de.codecentric:spring-boot-admin-starter-client:2.0.1')
+    compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

@@ -6,7 +6,7 @@ spring:
     name: service-b
   sleuth:
     sampler:
-      percentage: 1
+      probability: 1
   cloud:
     config:
       discovery:
@@ -20,6 +20,9 @@ spring:
         max-attempts: 10
   rabbitmq:
     host: localhost
+  zipkin:
+    sender:
+      type: web
 
 eureka:
   instance:
@@ -29,10 +32,16 @@ eureka:
     fetchRegistry: true
     serviceUrl:
             defaultZone: http://localhost:8761/eureka/
-
-endpoints:
- shutdown:
-  enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS
 
 ---
 spring:
@@ -41,9 +50,11 @@ spring:
     name: service-b
   sleuth:
     sampler:
-      percentage: 1
+      probability: 1
   zipkin:
     base-url: http://zipkin:9411/
+    sender:
+      type: web
   cloud:
     config:
       discovery:
@@ -70,7 +81,13 @@ eureka:
     fetchRegistry: true
     serviceUrl:
             defaultZone: http://eureka-server:8761/eureka/
-
-endpoints:
- shutdown:
-  enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS

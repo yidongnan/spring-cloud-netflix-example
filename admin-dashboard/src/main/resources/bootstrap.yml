@@ -13,6 +13,16 @@ eureka:
     fetchRegistry: true
     serviceUrl:
             defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS
 ---
 spring:
   profiles: docker
@@ -31,3 +41,13 @@ eureka:
     fetchRegistry: true
     serviceUrl:
             defaultZone: http://eureka-server:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS
