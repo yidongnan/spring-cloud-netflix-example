@@ -2,7 +2,9 @@
 
 <details>
 <summary>Translations:</summary>
-- [中文](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README-zh.md)
+
+- [Chinese / 中文](README-zh.md)
+
 </details>
 
 spring-cloud-netflix-example is an example for microservices system.
