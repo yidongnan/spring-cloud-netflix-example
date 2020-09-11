@@ -1,13 +1,15 @@
-# spring-cloud-netflix-example
+# Spring Cloud Netflix Sample Application
 
-README: [English](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README.md) | [中文](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README-zh.md)
+<details>
+<summary>Translations:</summary>
+- [中文](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README-zh.md)
+</details>
 
 spring-cloud-netflix-example is an example for microservices system.
 
-It's contain 
-**configuration management, service discovery, circuit breakers, intelligent routing, distributed tracing, application monitor**.
+It contains **configuration management, service discovery, circuit breakers, intelligent routing, distributed tracing, application monitor**.
 
-The registry center uses the eureka, if you want to use consul, you can refer to https://github.com/yidongnan/spring-cloud-consul-example
+The registry center uses the eureka, if you want to use consul, you can refer to https://github.com/yidongnan/spring-cloud-consul-example.
 
 ## Getting Started
 ```shell
@@ -15,12 +17,13 @@ The registry center uses the eureka, if you want to use consul, you can refer to
 ./buildDockerImage.sh
 docker-compose up -d
 ```
-if you want to start more serve, you should use 
+
+If you want to start more serve, you should use:
 ```shell
 docker-compose scale service-a=2 service-b=3  
 ```
 
-start the basic service in the development environment
+Start the basic service in the development environment:
 ```
 docker-compose -f docker-compose-dev.yml up -d
 ```
@@ -45,11 +48,11 @@ docker-compose -f docker-compose-dev.yml up -d
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_001.png">
 
-### Eureka DashBoard
+### Eureka Dashboard
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_002.png">
 
-### ZipKin DashBoard
+### ZipKin Dashboard
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_003.png">
 
@@ -61,7 +64,7 @@ docker-compose -f docker-compose-dev.yml up -d
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_005.png">
 
-### Spring Boot Admin DashBoard
+### Spring Boot Admin Dashboard
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_006.png">
 
