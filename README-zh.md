@@ -1,6 +1,4 @@
-# spring-cloud-netflix-example
-README: [English](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README.md) | [中文](https://github.com/yidongnan/spring-cloud-netflix-example/blob/master/README-zh.md)
-
+# Spring Cloud Netflix Sample Application
 
 Java技术交流群：294712648 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=34ad403ce78380042406f11a122637ea9d66c11ae20f331dff37bc90a4fde939"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Java技术交流群" title="Java技术交流群"></a>
 
@@ -45,11 +43,11 @@ docker-compose -f docker-compose-dev.yml up -d
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_001.png">
 
-### Eureka DashBoard
+### Eureka Dashboard
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_002.png">
 
-### ZipKin DashBoard
+### ZipKin Dashboard
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_003.png">
 
@@ -61,7 +59,7 @@ docker-compose -f docker-compose-dev.yml up -d
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_005.png">
 
-### Spring Boot Admin DashBoard
+### Spring Boot Admin Dashboard
 [](url "title")
 <img src="https://raw.githubusercontent.com/yidongnan/spring-cloud-netflix-example/master/screenshots/Selection_006.png">
 
